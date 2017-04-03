@@ -1,0 +1,18 @@
+# node
+node_modules/
+
+# build destination
+build/
+
+# dist destination
+dist/
+
+# idea
+.idea
+*.iml
+
+# tmp
+*~
+
+# log files
+*.log*
