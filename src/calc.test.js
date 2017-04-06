@@ -1,11 +1,11 @@
 /*
- * Unit tests for lib/calculator.js
+ * Unit tests for src/calc.js
  */
 
 import { before, after, describe, it } from 'mocha'
 import { assert } from 'chai'
 
-import { sumReturn } from '../src/calc.js'
+import { sumReturn } from './calc.js'
 
 describe('Testing simple function', () => {
     it('test simple math', () => {
