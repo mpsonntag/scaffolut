@@ -2,84 +2,84 @@
 // Generated on Mon Apr 03 2017 21:01:21 GMT+0200 (CEST)
 
 module.exports = function(config) {
-  config.set({
+    config.set({
 
-    // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
-
-
-    // frameworks to use
-    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'browserify'],
+        // base path that will be used to resolve all patterns (eg. files, exclude)
+        basePath: "",
 
 
-    // list of files / patterns to load in the browser
-    files: [
-      {pattern: 'src/**/*.js', included: true},
-      {pattern: 'src/**/*.test.js', included: true}
-    ],
+        // frameworks to use
+        // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+        frameworks: ["mocha", "browserify"],
 
 
-    // list of files to exclude
-    exclude: [
-    ],
+        // list of files / patterns to load in the browser
+        files: [
+            {pattern: "src/**/*.js", included: true},
+            {pattern: "src/**/*.test.js", included: true}
+        ],
 
 
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-      'src/**/*.js': ['browserify']
-    },
+        // list of files to exclude
+        exclude: [
+        ],
 
 
-    // Browserify configuration
-    // The coverage command goes here instead of the preprocessor because we need it to work with browserify
-    browserify: {
-      debug: true,
-      transform: [
-        [
-          'babelify',
-          {
-            presets: 'es2015'
-          }
-        ]
-      ]
-    },
-
-    // test results reporter to use
-    // possible values: 'dots', 'progress'
-    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+        // preprocess matching files before serving them to the browser
+        // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+        preprocessors: {
+            "src/**/*.js": ["browserify"]
+        },
 
 
-    // web server port
-    port: 9876,
+        // Browserify configuration
+        // The coverage command goes here instead of the preprocessor because we need it to work with browserify
+        browserify: {
+            debug: true,
+            transform: [
+                [
+                    "babelify",
+                    {
+                        presets: "es2015"
+                    }
+                ]
+            ]
+        },
+
+        // test results reporter to use
+        // possible values: 'dots', 'progress'
+        // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+        reporters: ["progress"],
 
 
-    // enable / disable colors in the output (reporters and logs)
-    colors: true,
+        // web server port
+        port: 9876,
 
 
-    // level of logging
-    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_INFO,
+        // enable / disable colors in the output (reporters and logs)
+        colors: true,
 
 
-    // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+        // level of logging
+        // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+        logLevel: config.LOG_INFO,
 
 
-    // start these browsers
-    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Opera'],
+        // enable / disable watching file and executing tests whenever any file changes
+        autoWatch: false,
 
 
-    // Continuous Integration mode
-    // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true,
+        // start these browsers
+        // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+        browsers: ["Opera"],
 
-    // Concurrency level
-    // how many browser should be started simultaneous
-    concurrency: Infinity
-  })
+
+        // Continuous Integration mode
+        // if true, Karma captures browsers, runs the tests and exits
+        singleRun: true,
+
+        // Concurrency level
+        // how many browser should be started simultaneous
+        concurrency: Infinity
+    })
 };
