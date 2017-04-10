@@ -4,7 +4,6 @@ dist: trusty
 language: node_js
 
 addons:
- firefox: latest
  apt:
   sources:
   - google-chrome
