@@ -12,6 +12,7 @@
     "browserify": ">=10 <14",
     "browserify-istanbul": "^2.0.0",
     "chai": "^3.5.0",
+    "coveralls": "^2.13.0",
     "istanbul": "^0.4.5",
     "karma": "^1.5.0",
     "karma-browserify": "^5.0.5",
