@@ -2,6 +2,9 @@
 // Generated on Mon Apr 03 2017 21:01:21 GMT+0200 (CEST)
 
 module.exports = function(config) {
+
+    let testBrowsers = ["Opera", "Chromium", "Firefox"]
+
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -71,7 +74,7 @@ module.exports = function(config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ["Opera"],
+        browsers: testBrowsers,
 
 
         // Continuous Integration mode
