@@ -63,14 +63,30 @@ module.exports = function(config) {
                     {
                         presets: "es2015"
                     }
+                ],
+                [
+                    "browserify-istanbul",
+                    {
+                        instrumenterConfig: {
+                            embedSource: true
+                        }
+                    }
                 ]
+            ]
+        },
+
+        coverageReporter: {
+            reporters: [
+                {"type": "text"},
+                {"type": "html", dir: "coverage"},
+                {"type": "lcov"}
             ]
         },
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ["progress"],
+        reporters: ["progress", "mocha", "coverage"],
 
 
         // web server port
@@ -106,4 +122,4 @@ module.exports = function(config) {
         // how many browser should be started simultaneous
         concurrency: Infinity
     })
-};
+}
