@@ -8,8 +8,10 @@ addons:
  apt:
   sources:
   - google-chrome
+  - opera
   packages:
   - google-chrome-stable
+  - opera-stable
 
 node_js:
  - node
