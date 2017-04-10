@@ -5,7 +5,7 @@ module.exports = function(config) {
 
     let testBrowsers = ["Opera", "Chromium", "Firefox"]
     if (process.env.TRAVIS) {
-        testBrowsers = ["PhantomJS", "Firefox"]
+        testBrowsers = ["PhantomJS", "Firefox", "Chrome"]
     }
 
     config.set({
