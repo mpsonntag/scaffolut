@@ -87,6 +87,9 @@ module.exports = function(config) {
         browsers: testBrowsers,
 
 
+        // docker build supposedly fails chrome builds with sandbox active
+        customLaunchers: cl,
+
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
         singleRun: true,
