@@ -118,6 +118,9 @@ module.exports = function(config) {
         // if true, Karma captures browsers, runs the tests and exits
         singleRun: true,
 
+        // Increase timeout to accommodate Travis CI issue.
+        browserNoActivityTimeout: 60000,
+
         // Concurrency level
         // how many browser should be started simultaneous
         concurrency: Infinity
