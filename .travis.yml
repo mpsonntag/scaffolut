@@ -8,7 +8,7 @@ addons:
  apt:
   sources:
   - google-chrome
-  - opera
+  - sourceline: "deb http://deb.opera.com/opera/ stable non-free"
   packages:
   - google-chrome-stable
   - opera-stable
