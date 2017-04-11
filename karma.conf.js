@@ -22,6 +22,9 @@ module.exports = function(config) {
             }
         }
     }
+    else if (process.env.TRAVIS && process.env.TRAVIS_OS_NAME === "osx") {
+        testBrowsers = ["Safari"]
+    }
     else if (process.env.APPVEYOR) {
         testBrowsers = ["IE", "Firefox", "Chrome"]
     }
