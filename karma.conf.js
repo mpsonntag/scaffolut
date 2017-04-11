@@ -5,7 +5,7 @@ module.exports = function(config) {
 
     let cl = {}
     let testBrowsers = ["Opera", "Chromium", "Firefox"]
-    if (process.env.TRAVIS) {
+    if (process.env.TRAVIS && process.env.TRAVIS_OS_NAME === "linux") {
         testBrowsers = ["PhantomJS", "Chrome", "Firefox", "Opera"]
         cl = {
             Chrome_without_sandbox: {
