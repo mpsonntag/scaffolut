@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Testing ground for setting up es and vue unit testing with Karma, Mocha, Chai and Travis CI",
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start karma.conf.js"
+    "test": "karma start karma.conf.js"
   },
   "devDependencies": {
     "babel-polyfill": "^6.9.1",
