@@ -5,6 +5,11 @@ environment:
     - nodejs_version: "6"
 
 install:
+  # Install additional browsers
+  - choco install firefox
+  - choco install googlechrome
+  - choco install opera
+
   # Get the latest stable Node.js version
   - ps: Install-Product node $env:nodejs_version
   - node --version
