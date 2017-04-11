@@ -15,3 +15,7 @@ install:
 test_script:
   # Run tests
   - npm test
+
+# nothing to compile in this project
+build: off
+deploy: off
