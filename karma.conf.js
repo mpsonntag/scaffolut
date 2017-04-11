@@ -23,7 +23,7 @@ module.exports = function(config) {
         }
     }
     else if (process.env.APPVEYOR) {
-        testBrowsers = ["IE", "Firefox", "Chrome", "Opera"]
+        testBrowsers = ["IE", "Firefox", "Chrome"]
     }
 
     config.set({
