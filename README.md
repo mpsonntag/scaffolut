@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/mpsonntag/scaffolut.svg?branch=master)](https://travis-ci.org/mpsonntag/scaffolut)
 [![Coverage Status](https://coveralls.io/repos/github/mpsonntag/scaffolut/badge.svg?branch=master)](https://coveralls.io/github/mpsonntag/scaffolut?branch=master)
+[![Dependencies status](https://david-dm.org/mpsonntag/scaffolut/status.svg)](https://david-dm.org/mpsonntag/scaffolut/status.svg)
+[![DevDependencies status](https://david-dm.org/mpsonntag/scaffolut/dev-status.svg)](https://david-dm.org/mpsonntag/scaffolut/dev-status.svg)
 
 scuffolut
 =========
