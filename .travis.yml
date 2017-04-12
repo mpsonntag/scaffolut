@@ -21,12 +21,9 @@ matrix:
     - os: linux
       node_js: "7"
       env: COVERALLS=1
-    - os: osx
-      node_js: node
-    - os: osx
+  exclude:
+    - os: linux
       node_js: "7"
-    - os: osx
-      node_js: "6"
   allow_failures:
     - os: linux
       node_js: node
