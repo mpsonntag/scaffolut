@@ -12,9 +12,10 @@ module.exports = function(config) {
             Firefox_without_sandbox: { base: "Firefox", flags: ["--no-sandbox"] },
             Opera_without_sandbox: { base: "Opera", flags: ["--no-sandbox"] }
         }
-    } else if (process.env.TRAVIS && process.env.TRAVIS_OS_NAME === "linux" && process.env.COVERALLS === 1) {
-        testBrowsers = ["Firefox"]
-        cl = { Firefox_without_sandbox: { base: "Firefox", flags: ["--no-sandbox"] } }
+        if (process.env.COVERALLS === 1) {
+            testBrowsers = ["Firefox"]
+            cl = { Firefox_without_sandbox: { base: "Firefox", flags: ["--no-sandbox"] } }
+        }
     } else if (process.env.TRAVIS && process.env.TRAVIS_OS_NAME === "osx") {
         testBrowsers = ["Safari", "Firefox", "Chrome"]
     } else if (process.env.APPVEYOR) {

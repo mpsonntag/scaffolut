@@ -7,6 +7,15 @@ branches:
   only:
     - master
 
+os:
+  - linux
+  - osx
+
+node_js:
+  - node
+  - "7"
+  - "6"
+
 matrix:
   include:
     - os: linux
@@ -21,8 +30,6 @@ matrix:
   allow_failures:
     - os: linux
       node_js: node
-    - os: linux
-      node_js: "7"
     - os: linux
       node_js: "6"
 
