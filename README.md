@@ -7,15 +7,17 @@
 scuffolut
 =========
 
-This is a testing ground for setting up an es2016/vue project with unit testing via 
+This is a testing ground for setting up an es2016/vue project with custom eslint rules and unit testing via 
 Karma, Mocha, Chai, Istanbul, Travis CI, Appveyor and Coveralls.
 
 When setting up a CI JavaScript project, hopefully the linklist below gives the Questing One
 some pointers into the right direction.
 
 - Note: with the current setup individual builds on Travis with `os: linux` randomly fail with the message 
-"Some of your tests did a full page reload!", but run fine if the exact same build is restarted on Travis... 
-Seems to be a `Karma` problem as far as [this issue](https://github.com/karma-runner/karma/issues/1101) describes it.
+"Some of your tests did a full page reload!", but run fine if the exact same build is restarted on Travis...
+So far it seems, that only builds for Chrome and Opera are affected. Seems to be a `Karma` problem 
+as far as [this issue](https://github.com/karma-runner/karma/issues/1101) describes it.
+Therefore the `.travis.yml` contains allowed fails for `os: linux` builds that test Opera and Chrome.
 
 ### Resources
 

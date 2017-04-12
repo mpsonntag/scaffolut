@@ -7,20 +7,27 @@ branches:
   only:
     - master
 
+os:
+  - linux
+  - osx
+
+node_js:
+  - node
+  - "7"
+  - "6"
+
 matrix:
   include:
     - os: linux
-      node_js: node
+      node_js: "7"
       env: COVERALLS=1
+  exclude:
     - os: linux
       node_js: "7"
+  allow_failures:
     - os: linux
-      node_js: "6"
-    - os: osx
       node_js: node
-    - os: osx
-      node_js: "7"
-    - os: osx
+    - os: linux
       node_js: "6"
 
 addons:
