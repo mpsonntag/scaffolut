@@ -8,9 +8,11 @@ import { assert } from "chai"
 import { sumReturn } from "../src/calc.js"
 
 describe("Testing simple function", () => {
+    const one = 1
+    const two = 2
     it("test simple math", () => {
-        assert.isOk(2 === sumReturn(1,1), "This should always pass")
-        assert.isNotOk(2 === sumReturn(1,2), "This should always fail")
+        assert.isOk(two === sumReturn(one, one), "This should always pass")
+        assert.isNotOk(two === sumReturn(one, two), "This should always fail")
     })
 })
 
