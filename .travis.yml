@@ -10,17 +10,20 @@ branches:
 matrix:
   include:
     - os: linux
-      node_js: node
+      node_js: "7"
       env: COVERALLS=1
-    - os: linux
-      node_js: "7"
-    - os: linux
-      node_js: "6"
     - os: osx
       node_js: node
     - os: osx
       node_js: "7"
     - os: osx
+      node_js: "6"
+  allow_failures:
+    - os: linux
+      node_js: node
+    - os: linux
+      node_js: "7"
+    - os: linux
       node_js: "6"
 
 addons:

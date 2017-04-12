@@ -6,21 +6,15 @@ module.exports = function(config) {
     let cl = {}
     let testBrowsers = ["Opera", "Chromium", "Firefox"]
     if (process.env.TRAVIS && process.env.TRAVIS_OS_NAME === "linux") {
-        testBrowsers = ["PhantomJS", "Chrome", "Firefox", "Opera"]
+        testBrowsers = ["Chrome", "Firefox", "Opera"]
         cl = {
-            Chrome_without_sandbox: {
-                base: "Chrome",
-                flags: ["--no-sandbox"]
-            },
-            Firefox_without_sandbox: {
-                base: "Firefox",
-                flags: ["--no-sandbox"]
-            },
-            Opera_without_sandbox: {
-                base: "Opera",
-                flags: ["--no-sandbox"]
-            }
+            Chrome_without_sandbox: { base: "Chrome", flags: ["--no-sandbox"] },
+            Firefox_without_sandbox: { base: "Firefox", flags: ["--no-sandbox"] },
+            Opera_without_sandbox: { base: "Opera", flags: ["--no-sandbox"] }
         }
+    } else if (process.env.TRAVIS && process.env.TRAVIS_OS_NAME === "linux" && process.env.COVERALLS === 1) {
+        testBrowsers = ["Firefox"]
+        cl = { Firefox_without_sandbox: { base: "Firefox", flags: ["--no-sandbox"] } }
     } else if (process.env.TRAVIS && process.env.TRAVIS_OS_NAME === "osx") {
         testBrowsers = ["Safari", "Firefox", "Chrome"]
     } else if (process.env.APPVEYOR) {
@@ -35,7 +29,6 @@ module.exports = function(config) {
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
         frameworks: ["mocha", "browserify"],
-
 
         // list of files / patterns to load in the browser
         files: [
