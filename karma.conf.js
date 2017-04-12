@@ -130,9 +130,6 @@ module.exports = function(config) {
 
         // Concurrency level
         // how many browser should be started simultaneous
-        // Keep this at one at a time. Travis tests might randomly
-        // crash with the message "Some of your tests did a full page reload!"
-        // when concurrency is set to "Infinity".
-        concurrency: 1
+        concurrency: Infinity
     })
 }

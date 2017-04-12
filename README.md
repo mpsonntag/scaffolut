@@ -13,6 +13,10 @@ Karma, Mocha, Chai, Istanbul, Travis CI, Appveyor and Coveralls.
 When setting up a CI JavaScript project, hopefully the linklist below gives the Questing One
 some pointers into the right direction.
 
+- Note: with the current setup individual builds on Travis with `os: linux` randomly fail with the message 
+"Some of your tests did a full page reload!", but run fine if the exact same build is restarted on Travis... 
+Seems to be a `Karma` problem as far as [this issue](https://github.com/karma-runner/karma/issues/1101) describes it.
+
 ### Resources
 
 #### Unit testing
