@@ -109,7 +109,8 @@ module.exports = function(config) {
         singleRun: true,
 
         // Increase timeout to accommodate Travis CI issue.
-        browserNoActivityTimeout: 60000,
+        // Got timeout with the travis suggestion of 60000 for Safari on osx build.
+        browserNoActivityTimeout: 100000,
 
         // Concurrency level
         // how many browser should be started simultaneous
